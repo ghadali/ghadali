@@ -1,10 +1,15 @@
-- 👋 Hi, I’m @ghadali
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
+const express = require('express')
 
-<!---
-ghadali/ghadali is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+const app = express()
+
+app.get('/', (req, res) => {
+    res.send('hello')
+})
+
+app.get('/callback',(req, res) => {
+    res.send('Welcome') #here word welcom will display in browser when authorized.
+})
+
+app.listen(3000,() => {
+    console.log('we are running on port 3000') #show in terminal when running.
+})
